@@ -1,0 +1,81 @@
+/* edit.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="date"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: calc(100% - 22px);
+}
+
+button, .action-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover, .action-btn:hover {
+    background-color: #0056b3;
+}
+
+.action-btn {
+    background-color: #6c757d;
+}
+
+.action-btn:hover {
+    background-color: #5a6268;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    input[type="text"], input[type="date"] {
+        width: calc(100% - 12px);
+    }
+}
