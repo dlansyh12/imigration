@@ -1,5 +1,5 @@
 <?php
-include 'db_connection.php';
+include './config/db_connection.php';
 $id_pengungsi = $_GET['id'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "UPDATE pengungsi SET nama_lengkap='$nama_lengkap', jenis_kelamin='$jenis_kelamin', tempat_lahir='$tempat_lahir', tgl_lahir='$tgl_lahir', kewarganegaraan='$kewarganegaraan', masa_berlaku_kartu='$masa_berlaku_kartu', alamat='$alamat', no_tlp='$no_tlp' WHERE id_pengungsi='$id_pengungsi'";
 
     if ($conn->query($sql) === TRUE) {
-        header('Location: admin_dashboard.php');
+        header('Location: ./admin_dashboard.php');
         exit;
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
@@ -46,7 +46,7 @@ $row = $result->fetch_assoc();
 <body class="bg-gray-100 min-h-screen flex items-center justify-center">
     <!-- Back to Dashboard Button -->
     <div class="fixed top-4 left-4">
-        <a href="admin_dashboard.php" class="flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-3xl shadow-md transition duration-300">
+        <a href="./admin_dashboard.php" class="flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-3xl shadow-md transition duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 mr-2">
                 <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zM13 3v6h8V3h-8zm0 18h8v-10h-8v10z" />
             </svg>
@@ -57,7 +57,7 @@ $row = $result->fetch_assoc();
     <!-- Main Form Container -->
     <div class="container mx-auto my-8 max-w-lg p-6 bg-white shadow-lg rounded-xl">
         <h2 class="text-2xl font-semibold text-gray-700 mb-6 text-center">Edit Data Pengungsi</h2>
-        <form action="edit.php?id=<?php echo $id_pengungsi; ?>" method="POST">
+        <form action="./edit.php?id=<?php echo $id_pengungsi; ?>" method="POST">
             <div class="space-y-4">
                 <!-- Nama Lengkap -->
                 <div>

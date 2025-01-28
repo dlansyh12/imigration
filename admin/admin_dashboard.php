@@ -1,5 +1,5 @@
 <?php
-include 'db_connection.php';
+include 'config/db_connection.php';
 
 $search = "";
 if (isset($_GET['search'])) {
@@ -56,7 +56,7 @@ $total_pages = ceil($total_records / $limit);
         <div class="flex items-center">
             <span class="text-xl font-semibold uppercase text-black">Admin Dashboard</span>        
         </div>
-        <a href="index.php" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-1 px-3 rounded-lg shadow-md transition duration-300">
+        <a href="../index.php" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-1 px-3 rounded-lg shadow-md transition duration-300">
             Back
         </a>
     </div>
@@ -101,11 +101,11 @@ $total_pages = ceil($total_records / $limit);
                         <td class="px-3 py-2 whitespace-nowrap"><?php echo $row['alamat']; ?></td>
                         <td class="px-3 py-2 whitespace-nowrap"><?php echo $row['no_tlp']; ?></td>
                         <td class="px-3 py-2 whitespace-nowrap">
-                            <img src="assets/images/<?php echo $row['foto']; ?>" alt="Foto" class="object-cover w-12 h-12 border border-gray-300 rounded-md">
+                            <img src="../assets/images/<?php echo $row['foto']; ?>" alt="Foto" class="object-cover w-12 h-12 border border-gray-300 rounded-md">
                         </td>
                         <td class="px-3 py-2 whitespace-nowrap">
-                            <a href="edit.php?id=<?php echo $row['id_pengungsi']; ?>" class="text-blue-600 hover:text-blue-800 font-semibold"><i class="fas fa-edit"></i> Edit</a>
-                            <a href="delete.php?id=<?php echo $row['id_pengungsi']; ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="text-red-600 hover:text-red-800 font-semibold ml-2"><i class="fas fa-trash-alt"></i> Delete</a>
+                            <a href="./edit.php?id=<?php echo $row['id_pengungsi']; ?>" class="text-blue-600 hover:text-blue-800 font-semibold"><i class="fas fa-edit"></i> Edit</a>
+                            <a href="./delete.php?id=<?php echo $row['id_pengungsi']; ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="text-red-600 hover:text-red-800 font-semibold ml-2"><i class="fas fa-trash-alt"></i> Delete</a>
                         </td>
                     </tr>
                     <?php } ?>

@@ -22,7 +22,7 @@
 <body class="bg-white-500 min-h-screen flex items-center justify-center">
     <!-- Dashboard Button -->
     <div class="fixed top-4 left-4">
-        <a href="admin_dashboard.php" class="flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-3xl shadow-md transition duration-300">
+        <a href="admin/admin_dashboard.php" class="flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-3xl shadow-md transition duration-300">
             <!-- SVG Icon -->
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 mr-2">
                 <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zM13 3v6h8V3h-8zm0 18h8v-10h-8v10z" />
@@ -33,7 +33,7 @@
 
     <!-- Main Form Content -->
     <div class="container mx-auto my-8 max-w-lg p-6 bg-white shadow-lg rounded-xl">
-        <form action="submit.php" method="POST" enctype="multipart/form-data">
+        <form action="admin/submit.php" method="POST" enctype="multipart/form-data">
             <!-- Compact Modern Table Design -->
             <table class="w-full table-auto border-collapse text-sm">
                 <tbody>
